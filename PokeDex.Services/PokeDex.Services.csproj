@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PokeDex.Domain\PokeDex.Domain.csproj" />
+    <ProjectReference Include="..\PokeDex.Common\PokeDex.Common.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Refit" Version="8.0.0" />
+    <PackageReference Include="Refit.Newtonsoft.Json" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Maui.Core" Version="8.0.80" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="RestApi\" />
+    <None Remove="Services\" />
+    <None Remove="Contracts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+    <Folder Include="RestApi\" />
+  </ItemGroup>
+</Project>
